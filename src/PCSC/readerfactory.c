@@ -63,7 +63,7 @@ $Id: readerfactory.c 123 2010-03-27 10:50:42Z ludovic.rousseau@gmail.com $
 #include "sys_generic.h"
 #include "eventhandler.h"
 #include "ifdwrapper.h"
-#include "readerState.h"
+#include "readerstate.h"
 
 #include <security_utilities/debugging.h>
 
