@@ -46,6 +46,7 @@ add_framework(PCSC
 	DEPENDENCIES
 		system
 		CoreFoundation
+		libsecurity_utilities_static
 )
 
 set_source_files_properties(src/PCSC/tokenparser.c APPEND_STRING PROPERTIES COMPILE_DEFINIONS -DYY_NO_UNPUT)
