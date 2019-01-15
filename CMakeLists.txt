@@ -3,6 +3,7 @@ project(SmartCardServices)
 add_compile_options(
 	-nostdinc
 	-fblocks
+	-Wno-gcc-compat
 )
 
 add_definitions(
@@ -46,7 +47,9 @@ add_framework(PCSC
 	DEPENDENCIES
 		system
 		CoreFoundation
-		libsecurity_utilities_static
+		security_utilities
+		Security
+		cxx
 )
 
 set_source_files_properties(src/PCSC/tokenparser.c APPEND_STRING PROPERTIES COMPILE_DEFINIONS -DYY_NO_UNPUT)
