@@ -6,14 +6,16 @@ add_compile_options(
 	-Wno-gcc-compat
 )
 
-add_definitions(
-	-DPCSC_DEBUG=1
-	-DUSE_SYSLOG=1
-	-DUSE_DAEMON=1
+add_compile_definitions(
+	PCSC_DEBUG=1
+	USE_SYSLOG=1
+	USE_DAEMON=1
+	PRIVATE
 )
 
 include_directories(BEFORE
 	${CMAKE_CURRENT_SOURCE_DIR}/src/PCSC
+	${CMAKE_CURRENT_SOURCE_DIR}/../security/OSX/include
 	#${CMAKE_SOURCE_DIR}/src/external/libcxx/include
 )
 

@@ -37,6 +37,11 @@
 #include <security_cdsa_utilities/handleobject.h>
 #include <map>
 
+#if defined(DARLING) && TARGET_OS_OSX
+// the latest Security has removed this header include from `security_utilities/debugging.h`
+#include <security_utilities/debugging_internal.h>
+#endif
+
 #if 0
 	struct ReaderContext
 	{
