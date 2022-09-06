@@ -1,5 +1,8 @@
 project(SmartCardServices)
 
+remove_sdk_framework(PCSC)
+remove_sdk_framework(SmartCardServices)
+
 add_compile_options(
 	-nostdinc
 	-fblocks
@@ -22,10 +25,23 @@ include_directories(BEFORE
 set(DYLIB_COMPAT_VERSION "1.0.0")
 set(DYLIB_CURRENT_VERSION "1.0.0")
 
+set(FRAMEWORK_PCSC_VERSION "A")
+set(FRAMEWORK_SMARTCARDSERVICES_VERSION "A")
+
+generate_sdk_framework(SmartCardServices
+    VERSION ${FRAMEWORK_SMARTCARDSERVICES_VERSION}
+    HEADER "include/SmartCardServices"
+)
+
+generate_sdk_framework(PCSC
+    VERSION ${FRAMEWORK_PCSC_VERSION}
+    HEADER "include/PCSC"
+)
+
 add_framework(PCSC
 	FAT
 	CURRENT_VERSION
-	VERSION "A"
+	VERSION ${FRAMEWORK_PCSC_VERSION}
 
 	SOURCES
 		src/PCSC/readerstate.cpp
