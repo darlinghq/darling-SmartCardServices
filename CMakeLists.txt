@@ -18,7 +18,7 @@ add_compile_definitions(
 
 include_directories(BEFORE
 	${CMAKE_CURRENT_SOURCE_DIR}/src/PCSC
-	${CMAKE_CURRENT_SOURCE_DIR}/../security/OSX/include
+	${CMAKE_CURRENT_SOURCE_DIR}/darling/submodules/security/darling/include/macOS
 	#${CMAKE_SOURCE_DIR}/src/external/libcxx/include
 )
 
