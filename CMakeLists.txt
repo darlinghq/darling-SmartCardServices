@@ -35,7 +35,7 @@ generate_sdk_framework(SmartCardServices
 
 generate_sdk_framework(PCSC
     VERSION ${FRAMEWORK_PCSC_VERSION}
-    HEADER "include/PCSC"
+    HEADER "darling/include/PCSC"
 )
 
 add_framework(PCSC
