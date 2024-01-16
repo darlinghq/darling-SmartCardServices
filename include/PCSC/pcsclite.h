@@ -1,1 +1,0 @@
-../../src/PCSC/pcsclite.h
